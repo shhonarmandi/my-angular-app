@@ -1,2 +1,10 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
-<router-outlet />
+<mat-form-field>
+  <mat-label>Choose a date</mat-label>
+  <input [matDatepicker]="picker" matInput>
+  <mat-datepicker-toggle [for]="picker" matIconSuffix></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<br>
+<button (click)="switchToGerman()">Switch to German</button>
+<button (click)="switchToEnglish()">Switch to English</button>
+<router-outlet/>
